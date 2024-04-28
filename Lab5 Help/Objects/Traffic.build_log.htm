@@ -1,0 +1,328 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Bui Manh Huy
+HUST
+User-based license: Keil MDK Community
+Valid until: Jun 1 2033. Cached until: Jan 25 2024
+ 
+Tool Versions:
+Toolchain:       Keil MDK Community  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\Bai Tap\Ki Thuat Vi Xu Ly\Lab5 Help\Traffic.uvprojx
+Project File Date:  01/19/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/buihu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/buihu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/buihu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+4 warnings generated.
+compiling system_stm32f10x.c...
+main.c(26): warning: no previous extern declaration for non-static variable 'FSM' [-Wmissing-variable-declarations]
+TempState FSM[13]={
+          ^
+main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+TempState FSM[13]={
+^
+main.c(55): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void DelayMilisec();
+                 ^
+                  void
+main.c(75): warning: passing arguments to 'DelayMilisec' without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]
+                DelayMilisec(FSM[n].timemili);
+                            ^
+main.c(65): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t n = StopAll;
+                ^
+main.c(3): warning: In file included from...
+./stm32f103xx.h(160): warning: In file included from...
+./stm32f103xx_gpio_driver.h(8): warning: padding size of 'GPIO_Config' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct{
+        ^
+main.c(84): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  GPIO_Handle GPIO_LedTraffic;
+              ^
+main.c(160): warning: no previous prototype for function 'EXTI9_5_IRQHandler' [-Wmissing-prototypes]
+void EXTI9_5_IRQHandler(void){
+     ^
+main.c(160): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI9_5_IRQHandler(void){
+^
+static 
+main.c(55): warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a subsequent definition [-Wdeprecated-non-prototype]
+void DelayMilisec();
+     ^
+main.c(167): note: conflicting prototype is here
+void DelayMilisec(uint32_t temptime){
+     ^
+main.c(170): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        volatile uint32_t i;
+                          ^
+main.c(167): warning: no previous prototype for function 'DelayMilisec' [-Wmissing-prototypes]
+void DelayMilisec(uint32_t temptime){
+     ^
+main.c(55): note: this declaration is not a prototype; add parameter declarations to make it one
+void DelayMilisec();
+     ^
+10 warnings generated.
+compiling main.c...
+LCDFunctions.c(8): warning: no previous extern declaration for non-static variable 'pinpos' [-Wmissing-variable-declarations]
+uint16_t pinpos[16] = {
+         ^
+LCDFunctions.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t pinpos[16] = {
+^
+LCDFunctions.c(188): warning: variable length array used [-Wvla]
+                char StringNumber[MaxLengthOfString];
+                                  ^~~~~~~~~~~~~~~~~
+LCDFunctions.c(193): warning: misleading indentation; statement is not part of the previous 'else' [-Wmisleading-indentation]
+                LCDSendString(StringNumber);
+                ^
+LCDFunctions.c(191): note: previous statement is here
+        else
+        ^
+LCDFunctions.c(199): warning: variable length array used [-Wvla]
+                char StringNumber[MaxLengthOfString];
+                                  ^~~~~~~~~~~~~~~~~
+LCDFunctions.c(200): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                sprintf(StringNumber, "%f", floatnumber);
+                ~~~~~~~                     ^~~~~~~~~~~
+LCDFunctions.c(215): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                                                        LCDSendCommand(0x80 + X + (Y*64));
+                                                        ~~~~~~~~~~~~~~ ~~~~~~~~~^~~~~~~~
+LCDFunctions.c(228): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        LCDSendCommand(0x80 + X + (Y*64));
+                        ~~~~~~~~~~~~~~ ~~~~~~~~~^~~~~~~~
+7 warnings generated.
+compiling LCDFunctions.c...
+stm32f103xx_gpio_driver.c(22): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIOA_CLOCK_DISABLE();
+                        ^~~~~~~~~~~~~~~~~~~~~
+./stm32f103xx.h(120): note: expanded from macro 'GPIOA_CLOCK_DISABLE'
+#define GPIOA_CLOCK_DISABLE()   (RCC->APB2ENR  &= (~(1 << 2)))
+                                               ~~  ^~~~~~~~~
+stm32f103xx_gpio_driver.c(24): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIOB_CLOCK_DISABLE();
+                        ^~~~~~~~~~~~~~~~~~~~~
+./stm32f103xx.h(121): note: expanded from macro 'GPIOB_CLOCK_DISABLE'
+#define GPIOB_CLOCK_DISABLE()   (RCC->APB2ENR  &= (~(1 << 3)))
+                                               ~~  ^~~~~~~~~
+stm32f103xx_gpio_driver.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIOC_CLOCK_DISABLE();
+                        ^~~~~~~~~~~~~~~~~~~~~
+./stm32f103xx.h(122): note: expanded from macro 'GPIOC_CLOCK_DISABLE'
+#define GPIOC_CLOCK_DISABLE()   (RCC->APB2ENR  &= (~(1 << 4)))
+                                               ~~  ^~~~~~~~~
+stm32f103xx_gpio_driver.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIOD_CLOCK_DISABLE();
+                        ^~~~~~~~~~~~~~~~~~~~~
+./stm32f103xx.h(123): note: expanded from macro 'GPIOD_CLOCK_DISABLE'
+#define GPIOD_CLOCK_DISABLE()   (RCC->APB2ENR  &= (~(1 << 5)))
+                                               ~~  ^~~~~~~~~
+stm32f103xx_gpio_driver.c(40): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = ((tempGPIOHandle -> GPIO_PinConfig.GPIO_PinSpeed) + (GPIO_CR_GP_OUTPUT_PP)) << (4 * tmp2) ;
+                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(42): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(49): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = ((tempGPIOHandle -> GPIO_PinConfig.GPIO_PinSpeed) + (GPIO_CR_GP_OUTPUT_OD)) << (4 * tmp2) ;
+                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(51): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(54): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(58): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = ((tempGPIOHandle -> GPIO_PinConfig.GPIO_PinSpeed) + (GPIO_CR_AF_OUTPUT_PP)) << (4 * tmp2) ;
+                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(60): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(63): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(67): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = ((tempGPIOHandle -> GPIO_PinConfig.GPIO_PinSpeed) + (GPIO_CR_AF_OUTPUT_OD)) << (4 * tmp2) ;
+                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(69): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(72): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(77): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        temp = (GPIO_CR_FLOAT_INPUT << (4*tmp2));
+                             ~  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+stm32f103xx_gpio_driver.c(79): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(86): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = (GPIO_CR_INPUT_PUPD << (4*tmp2));
+                     ~  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+stm32f103xx_gpio_driver.c(88): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(91): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(96): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = (GPIO_CR_INPUT_PUPD << (4*tmp2));
+                     ~  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+stm32f103xx_gpio_driver.c(98): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(101): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(117): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                uint8_t temp1 = tempGPIOHandle->GPIO_PinConfig.GPIO_PinNumber / 4  ;
+                        ~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+stm32f103xx_gpio_driver.c(122): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        AFIO->EXTICR1 |= (code << ( temp2 * 4) );
+                                      ~~  ~~~~~^~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(124): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        AFIO->EXTICR2 |= (code << ( temp2 * 4) );
+                                      ~~  ~~~~~^~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(126): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        AFIO->EXTICR3 |= (code << ( temp2 * 4) );
+                                      ~~  ~~~~~^~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(128): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        AFIO->EXTICR4 |= (code << ( temp2 * 4) );
+                                      ~~  ~~~~~^~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(132): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        temp= (GPIO_CR_FLOAT_INPUT << (4*tmp2));
+                            ~  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+stm32f103xx_gpio_driver.c(134): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(137): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(141): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = (GPIO_CR_INPUT_PUPD << (4*tmp2));
+                     ~  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+stm32f103xx_gpio_driver.c(143): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(146): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(151): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                temp = (GPIO_CR_INPUT_PUPD << (4*tmp2));
+                     ~  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+stm32f103xx_gpio_driver.c(153): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRL &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(156): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        tempGPIOHandle -> pGPIOx -> CRH &= (~((0xF) << (4 * tmp2)));
+                                                        ~~  ^~~~~~~~~~~~~~~~~~~~~~
+stm32f103xx_gpio_driver.c(117): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                uint8_t temp1 = tempGPIOHandle->GPIO_PinConfig.GPIO_PinNumber / 4  ;
+                        ^
+stm32f103xx_gpio_driver.c(5): warning: In file included from...
+./stm32f103xx_gpio_driver.h(8): warning: padding size of 'GPIO_Config' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct{
+        ^
+stm32f103xx_gpio_driver.c(168): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA_REG_RESET();
+                ^~~~~~~~~~~~~~~~~
+./stm32f103xx.h(125): note: expanded from macro 'GPIOA_REG_RESET'
+#define GPIOA_REG_RESET()                                               do {(RCC->APB2STR |=(1 <<  2)); (RCC->APB2STR &= (~(1 <<  2)));}while(0)
+                                                                                                                      ~~  ^~~~~~~~~~
+stm32f103xx_gpio_driver.c(170): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOB_REG_RESET();
+                ^~~~~~~~~~~~~~~~~
+./stm32f103xx.h(126): note: expanded from macro 'GPIOB_REG_RESET'
+#define GPIOB_REG_RESET()           do {(RCC->APB2STR |=(1 <<  3)); (RCC->APB2STR &= (~(1 <<  3)));}while(0)
+                                                                                  ~~  ^~~~~~~~~~
+stm32f103xx_gpio_driver.c(172): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOC_REG_RESET();
+                ^~~~~~~~~~~~~~~~~
+./stm32f103xx.h(127): note: expanded from macro 'GPIOC_REG_RESET'
+#define GPIOC_REG_RESET()           do {(RCC->APB2STR |=(1 <<  4)); (RCC->APB2STR &= (~(1 <<  4)));}while(0)
+                                                                                  ~~  ^~~~~~~~~~
+stm32f103xx_gpio_driver.c(174): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOD_REG_RESET();
+                ^~~~~~~~~~~~~~~~~
+./stm32f103xx.h(128): note: expanded from macro 'GPIOD_REG_RESET'
+#define GPIOD_REG_RESET()           do {(RCC->APB2STR |=(1 <<  5)); (RCC->APB2STR &= (~(1 <<  5)));}while(0)
+                                                                                  ~~  ^~~~~~~~~~
+45 warnings generated.
+compiling stm32f103xx_gpio_driver.c...
+linking...
+Program Size: Code=8444 RO-data=484 RW-data=32 ZI-data=1056  
+FromELF: creating hex file...
+".\Objects\Traffic.axf" - 0 Error(s), 66 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/buihu/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/buihu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/system_stm32f10x.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

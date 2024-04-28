@@ -1,0 +1,10 @@
+--cpu Cortex-M3
+".\objects\stm32f103xx_gpio_driver.o"
+".\objects\main.o"
+".\objects\lcdfunctions.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--library_type=microlib --strict --scatter ".\Objects\Traffic.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Traffic.map" -o .\Objects\Traffic.axf
